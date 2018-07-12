@@ -1,196 +1,210 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
-	<title>账号注册</title>
-	<style type="text/css">
-	*{	margin:0;
-		padding:0;
-		border:0;
-		font-family:"微软雅黑";
-		background:#f9f9f9;}
-	.father_box{
-		width:900px;
-		height:780px;
-		margin:0 auto;
-		position: relative;}
-	.one{									  /* 头部 */
-		width:900px;
-		height:60px;
-		padding-top:14px;
-		box-sizing:border-box;}
-	.one p{                                   /* 中国第一大电子邮件服务商 */
-		display:inline-block;
-		font-size:20px;
-		position:absolute;
-		top:15px;
-		color:gray;
-		margin-left:8px;}
-	.two{width:900px;                         /* 欢迎说明 */
-		height:45px;
-		background:#5f8fc0;
-		color:#fff;
-		box-sizing:border-box;
-		padding-left:20px;
-		padding-top:10px;
-		font-size:15px;
-		border-radius:7px 7px 0 0;}
-	form{									/* 正文整体 */
-		width:550px;
-		height:675px;
-		background:#fff;}
-	input{									/* 表单单独控制 */
-		border:1px solid gray;
-		border-radius:3px;
-		height:25px;
-		position:absolute;
-		padding:2px;}
-	form>p{									 /*  表单块控制 */
-		width:550px;
-		height:70px;
-		font-size:15px;
-		position:relative;
-		text-align:right;
-		margin-top:10px;
-		background-color:#fff;}
-	.short_input{                                 /*  短表单 */
-		width:220px;
-		left:125px;
-		top:10px;}
-	.long_input{                             	/* 长表单 */
-		width:340px;
-		left:125px;
-		top:10px;
-		box-sizing:border-box;}
-	select{                          		   	/*  邮箱表单 */
-		width:90px;
-		height:30px;
-		left:380px;
-		top:10px;
-		border:1px solid gray;
-		border-radius:3px;
-		position:absolute;
-		padding:2px;}
-	.ante{										/* “@”符号 */
-		position:absolute;
-		top:12px;right:175px;
-		font-size:20px;}
-	span:nth-of-type(2){                 		 /*  表单提示信息 */
-		display:block;
-		position:absolute;
-		top:45px;left:125px;
-		font-size:11px;
-		color:gray;}
-	span:nth-of-type(1):before{               	 /*  表单说明前的“*”号 */
-		content:"*";
-		color:red;
-		margin-right:5px;}
-	span:nth-of-type(1){                         /*  表单说明 */
-		position:absolute;
-		right:440px;top:15px;
-		color:#555;}
-	.yanzheng{									 /* 验证码表单块控制 */
-		width:550px;
-		height:100px;
-		position:relative;}
-	.yanzheng_botton{						 /* 免费获取验证码按钮 */
-		width:150px;
-		height:30px;
-		background:#fff;
-		position:absolute;
-		top:70px;left:125px;}
-	.yanzheng img{							/* 验证码图片 */
-		position:absolute;
-		right:75px;}
-	.yanzheng a{							/* 更换验证码 */
-		position:absolute;
-		top:60px;right:80px;}
-	a{	font-size:10px;}
-	a:link,a:visited{						/* a标签访问前和访问后样式 */
-		text-decoration:none;
-		color:blue;}
-	a:hover,a:active{						/* a标签悬停时和单击时样式 */
-		text-decoration:underline;
-		color:blue;}
-	.tiaokuan{								/* 条款块设置 */
-		width:550px;
-		position:relative;
-		font-size:11px;
-		color:gray;}
-	.tiaokuan input{						/* 条款块内复选框设置 */
-		position:absolute;
-		left:125px;top:15px;}
-	.tiaokuan p{							/* 条款块内提示文字设置 */
-		position: absolute;
-		left:145px;top:20px;}
-	.zhuce_botton{							/* 注册按钮设置 */
-		width:128px;
-		height:33px;
-		background:#58ad44;
-		font-size:15px;
-		color:#fff;
-		text-align:center;
-		font-weight:bolder;
-		letter-spacing:1px;
-		position:absolute;
-		top:50px;right:295px;}
-	#guoqi{
-		background:url(国旗.PNG) no-repeat;
-		background-size:25px 15px;
-		background-position:7px 4px;
-		padding-left:38px;}
-	</style>
+<meta charset="utf-8"/>
+	<title>电商网站</title>
+	<link rel="stylesheet" href="index.css" type="text/css"/>
 </head>
 <body>
-<div class="father_box">
-	<div class="one">
-		<a href="#"><img src="1.jpg"/></a>
-		<img src="02.PNG"/>
-		<p>中国第一大电子邮件服务商</p>
-	</div>
-	<div class="two">欢迎注册无限容量的网易邮箱！邮件地址可以登录使用其他网易旗下产品。</div>
-	<form>
-		<p>
-			<span>邮件地址</span><input type="text" pattern="^[a-zA-Z][a-zA-Z0-9_]{5,17}$" class="short_input"/>
-			<select id="url_email">
-				<option>163.com</option>
-				<option>126.com</option>
-				<option>yeah.net</option>
-			</select>
-			<span>6~18个字符，可使用字母、数字、下划线，需以字母开头</span>
-			<span class="ante">@</span>
-		</p>
-		<p>
-			<span>密码</span><input type="password" class="long_input" />
-			<span>6~16个字符，区分大小写</span>
-		</p>
-		<p>
-			<span>确认密码</span><input type="password" class="long_input"/>
-			<span>请再次填写密码</span>
-		</p>
-		<p>
-			<span>手机号码</span><input type="tel" class="long_input" id="guoqi" value="+86-" />
-			<span>忘记密码时，可以通过该手机号码快速找回密码</span>
-		</p>
-		<p class="yanzheng">
-			<span>验证码</span><input type="text" class="short_input"/>
-			<span>请填写图片中的字符，不区分大小写</span>
-			<input type="button" value="免费获取验证码" class="yanzheng_botton" />
-			<img src="03.PNG"/>
-			<a href="#">看不清楚？换张图片</a>
-		</p>
-		<p>
-			<span>短信验证码</span><input type="text" class="long_input"/>
-			<span>请查收手机短信，并填写短信中的验证码</span>
-		</p>
-		<div class="tiaokuan">
-			<input type="checkbox"/>
-			<p>同意<a href="#">"服务条款"</a>和<a href="#">"隐私权相关政策"</a></p>
+<div class="videobox">
+	<header>
+		<div class="con">
+			<section class="left"></section>
+			<section class="right">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+			</section>
 		</div>
-		<p>
-			<input type="botton" value="立即注册" class="zhuce_botton" />
-		</p>
-	</form>
+	</header>
+	<nav>
+		<ul>
+			<li class="left">
+				<a href="#" class="one">
+					<img src="images/sanxian.png"/>
+					<span>选项</span>
+					<img src="images/sanjiao.png"/>
+				</a>
+				<aside>
+					<span></span>
+					<ol class="zuo">
+						<li class="con">护肤</li>
+						<li>>洁面</li>
+						<li>>爽肤水</li>
+						<li>>精华</li>
+						<li>>乳液</li>
+						<li class="con">彩妆</li>
+						<li>>BB霜</li>
+						<li>>卸妆</li>
+						<li>>粉底液</li>
+						<li class="con">香氛</li>
+						<li>>女士香水</li>
+						<li>>男士香水</li>
+						<li>>中性香水</li>
+					</ol>
+					<ol class="you">
+						<li class="con">男士专区</li>
+						<li>>爽肤水</li>
+						<li>>洁面</li>
+						<li>>面霜</li>
+						<li>>精华</li>
+						<li class="con">热门搜索</li>
+						<li>>洗面奶</li>
+						<li>>去黑头</li>
+						<li>>隔离</li>
+						<li>>面膜</li>
+					</ol>
+					<img src="images/tu1.jpg"/>
+				</aside>
+			</li>
+			<li class="center">
+				<form action="#">
+					<input type="text" value="请输入商品名称、品牌或编号">
+				</form>
+			</li>
+			<li class="right">
+				<a href="#">&#xe65e;</a>
+				<a href="#">&#xe608;</a>
+				<a href="#">&#xf012a;</a>
+				<a href="#">&#xe68e;</a>
+			</li>
+		</ul>
+	</nav>
+	<video src="video/home_loop_720p.mp4" autoplay="ture" loop="ture"></video>
+	<audio src="audio/home.ogg" autoplay="ture" loop="ture"></audio>
+	<div class="pic">
+		<p>Select the right resolution for your PC and dive in!（请为您的电脑选择正确的分辨率）</p>
+		<ul>
+			<li class="one"><span>&#xe662;</span>STANDARD标准</li>
+			<li class="two"><span>&#xe662;</span>HD高清</li>
+		</ul>
+	</div>
+</div>
+<div class="new">
+	<header>
+		<img src="images/new.jpg"/>
+	</header>
+	<p>补水保湿	提亮肤色 低敏配方 收缩毛孔 滋养容颜</p>
+	<ul>
+		<li>
+			<hgroup>
+				<h2>fresh skin 薏仁水</h2>
+				<h2>化妆水/爽肤水单品</h2>
+				<h2></h2>
+				<h2></h2>
+			</hgroup>
+		</li>
+		<li>
+			<hgroup>
+				<h2>蜂蜜原液天然滋养</h2>
+				<h2>美白护肤套装</h2>
+				<h2></h2>
+				<h2></h2>
+			</hgroup>
+		</li>
+		<li>
+			<hgroup>
+				<h2>纯情诱惑一抹惊艳</h2>
+				<h2>告别暗淡唇</h2>
+				<h2></h2>
+				<h2></h2>
+			</hgroup>
+		</li>
+	</ul>
+</div>
+<div class="try">
+	<header>
+		<img src="images/shizhuang.jpg"/>
+	</header>
+	<p>美化容貌 增添自信 突出个性</p>
+	<ul>
+		<li>
+			<img src="images/try1.jpg" class="zheng"/>
+			<img src="images/try4.jpg" class="fan"/>
+		</li>
+		<li>
+			<img src="images/try2.jpg" class="zheng"/>
+			<img src="images/try5.jpg" class="fan"/>
+		</li>
+		<li>
+			<img src="images/try3.jpg" class="zheng"/>
+			<img src="images/try6.jpg" class="fan"/>
+		</li>
+	</ul>
+</div>
+<div class="text">
+	<header>
+		<img src="images/cp.jpg"/>
+	</header>
+	<p>评测 我们更专业 用户 更放心</p>
+	<ul>
+		<li>
+			<img src="images/cp1.jpg" class="tu"/>
+			<img src="images/th1.png" class="tihuan"/>
+		</li>
+		<li>
+			<img src="images/cp2.jpg" class="tu"/>
+			<img src="images/th2.png" class="tihuan"/>
+		</li>
+		<li>
+			<img src="images/cp3.jpg" class="tu"/>
+			<img src="images/th3.png" class="tihuan"/>
+		</li>
+		<li>
+			<img src="images/cp4.jpg" class="tu"/>
+			<img src="images/th4.png" class="tihuan"/>
+		</li>
+		<li>
+			<img src="images/cp5.jpg" class="tu"/>
+			<img src="images/th5.png" class="tihuan"/>
+		</li>
+		<li>
+			<img src="images/cp6.jpg" class="tu"/>
+			<img src="images/th6.png" class="tihuan"/>
+		</li>
+		<li>
+			<img src="images/cp7.jpg" class="tu"/>
+			<img src="images/th7.png" class="tihuan"/>
+		</li>
+		<li>
+			<img src="images/cp8.jpg" class="tu"/>
+			<img src="images/th8.png" class="tihuan"/>
+		</li>
+	</ul>
+</div>
+<footer>
+	<div class="logo"></div>
+	<div class="message">
+		<form action="#">
+			<ul class="left">
+				<li>
+					<p><label for="">姓名：</label></p>
+					<input type="text">
+				</li>
+				<li>
+					<p>邮箱：</p>
+					<input type="email">
+				</li>
+				<li>
+					<p>电话：</p>
+					<input type="tel" pattern="^\d{11}$" title="请输入11位数字">
+				</li>
+				<li>
+					<p>密码：</p>
+					<input type="password">
+				</li>
+				<li>
+					<input type="submit" value="" class="but"/>
+				</li>
+			</ul>
+			<div class="right">
+				<p>留言：</p>
+				<textarea></textarea>
+			</div>
+		</form>
+	</div>
+</footer>
+<div class="banquan">
+	<a href="#">fresh skin 美肤科技有限公司</a>
 </div>
 </body>
 </html>
