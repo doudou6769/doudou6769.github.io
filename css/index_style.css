@@ -1,0 +1,120 @@
+/*****************************
+ **本文件用于定义网站主页样式 **
+ *****************************/
+
+/*************************
+ *本行用于定义导航栏状态
+ *选中时显示蓝色横条
+ **/
+nav>div>a:nth-of-type(1)::before {
+    background: #13C0E0;
+}
+
+/*****************定义header部分的样式*****************/
+
+header {
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header>img {
+    width: 100%;
+    height: 100%;
+}
+header>div {
+    font: 30px "雁翎";
+    color: #fff;
+    position: absolute;
+    width: 30vw;
+    text-align: center;
+    top: 40vh;
+    left: 32vw;
+}
+header>div>span {
+    font-size: 20px;
+}
+
+
+
+/************定义‘关于我’部分的样式***************/
+
+.about_me {
+    width: 100%;
+    height: 60vh;
+    /* border:1px solid red; */
+    position: absolute;
+    box-sizing: border-box;
+    top: 85vh;
+}
+.about_me>div:nth-of-type(1) {
+    width: 25vw;
+    height: 10vh;
+    margin: 4vh auto;
+    position: relative;
+    color: #01F3CB;
+    font-weight: bolder;
+    font-size: 23px;
+    text-align: center;
+}
+.about_me>div:nth-of-type(1)>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 2vh;
+    left: 0;
+}
+.information,
+.interest,
+.evaluation {
+    width: 27vw;
+    height: 35vh;
+    float: left;
+    margin-left: 4vw;
+    color: #fff;
+}
+.about_me h3 {
+    font-size: 20px;
+    margin: 0 0 20px 4vw;
+    position: relative;
+}
+.information h3::before {
+    background: url(../images/title03.png) no-repeat;
+}
+.interest h3::before {
+    background: url(../images/title02.png) no-repeat;
+}
+.evaluation h3::before {
+    background: url(../images/title01.png) no-repeat;
+}
+.about_me h3::before {
+    content: "";
+    background-size: 100% 100%;
+    display: block;
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    top: -9px;
+    left: -4vw;
+}
+.about_me table {
+    margin-left: 4vw;
+}
+.about_me td {
+    width: 10vw;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.about_me td:first-child {
+    color: #01F3CB;
+    font-size: 22px;
+    font-weight: bolder;
+}
+.about_me td:last-child {
+    font-size: 18px;
+}
+.about_me p {
+    font-size: 18px;
+    margin: 0 0 20px 4vw;
+}

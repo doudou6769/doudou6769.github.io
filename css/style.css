@@ -1,0 +1,102 @@
+/********************************
+ **本css文件用于定义网站相同样式
+ **所有HTML文件都将引入本css文件
+ */
+
+
+/**********引入的外部字体***************/
+@font-face {
+    font-family: "汉仪乐喵体";
+    src: url(../font/汉仪乐喵体简.ttf);
+}
+@font-face{
+    font-family:"雁翎";
+    src:url(../font/简雁翎.ttf);
+}
+/***************end********************/
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+}
+body {
+    position: relative;
+    font-family: "微软雅黑";
+    background:#202731;
+}
+/**********定义导航栏样式*************/
+nav {
+    width: 100%;
+    height: 9vh;
+    background-color: rgba(34, 34, 34, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+nav>div:first-child {
+    color: #fff;
+    font-family: "汉仪乐喵体";
+    font-size: 2vw;
+    margin: 2vh 0 0 12vw;
+}
+
+nav>div>div{
+    display: inline-block;
+    font-size:25px;
+    width:30px;
+    text-align:center;
+    margin-left:-10px;
+}
+nav>div>div>span{
+    font-size:13px;
+    display:block;
+    margin-top:-12px;
+}
+
+nav>div:nth-child(2) {
+    width: 420px;
+    height: 100%;
+    position: absolute;
+    right: 250px;
+    top: 0px;
+}
+nav>div>a {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bolder;
+    width: 60px;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 25px;
+    margin-right: 20px;
+}
+nav>div>a::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    float: left;
+    margin-top: -25px;
+}
+nav>div>a:hover {
+    background: rgba(141,155,155,0.7);
+}
+nav>img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top:13px;
+    right:210px;
+}
+/*****************nav-end*****************/
