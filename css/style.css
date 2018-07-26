@@ -73,12 +73,12 @@ nav>div>a {
     color: #fff;
     font-size: 14px;
     font-weight: bolder;
-    width: 60px;
+    width: 9vh;
     height: 100%;
     text-align: center;
     box-sizing: border-box;
     padding-top: 25px;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 nav>div>a::before {
     content: "";
