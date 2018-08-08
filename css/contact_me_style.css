@@ -1,0 +1,64 @@
+/*****************************
+ **本文件用于定义网站联系我样式 **
+ *****************************/
+
+/*************************
+ *本行用于定义导航栏状态
+ *选中时显示蓝色横条
+ **/
+nav>div>a:nth-of-type(4)::before {
+    background: #13C0E0;
+}
+.wenzi{
+	width:36%;
+	height:200px;
+	color:#fff;
+	position:relative;
+	margin:30px 0 0 32%;
+}
+.wenzi p{
+	font-family: "卡通";
+	font-size:25px;
+	line-height:40px;
+	text-align:center;
+}
+.wenzi>p:first-child{
+	color:#1DD4AD;
+}
+.wenzi>p:nth-child(2){
+	color:#61C2FB;
+}
+.wenzi>p:nth-child(3){
+	color:#441CD5;
+}
+.wenzi>p:nth-child(4){
+	color:#5603DA;
+}
+.wenzi>p:last-child{
+	color:#9A04FC;
+}
+.erweima{
+	width:60%;
+	height:400px;
+	position:relative;
+	margin:30px 0 0 20%;
+	color:#25C6FC;
+	font-family: "剪纸";
+}
+.erweima>div{
+	display:inline-block;
+	width:40%;
+	height:100%;
+	float:left;
+	margin-right:10%;
+}
+.erweima>div>p{
+	text-align: center;
+	font-size:25px;
+	margin-bottom:25px;
+}
+.erweima>div>img{
+	width:80%;
+	height:80%;
+	margin-left:10%;
+}

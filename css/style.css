@@ -13,6 +13,14 @@
     font-family:"雁翎";
     src:url(../font/简雁翎.ttf);
 }
+@font-face{
+    font-family: "卡通";
+    src:url(../font/简卡通.TTF);
+}
+@font-face{
+    font-family: "剪纸";
+    src:url(../font/简剪纸.TTF);
+}
 /***************end********************/
 
 a:link,
@@ -28,15 +36,37 @@ a:active {
     list-style: none;
 }
 body {
-    position: relative;
     font-family: "微软雅黑";
     background:#202731;
+}
+/*****************定义header部分的样式*****************/
+
+header {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+}
+header>img {
+    width: 100%;
+    height: 100%;
+}
+header>div {
+    font: 30px "雁翎";
+    color: #fff;
+    position: absolute;
+    width: 30vw;
+    text-align: center;
+    top: 40vh;
+    left: 32vw;
+}
+header>div>span {
+    font-size: 20px;
 }
 /**********定义导航栏样式*************/
 nav {
     width: 100%;
     height: 9vh;
-    background-color: rgba(34, 34, 34, 0.7);
+    background-color: rgba(1, 1, 1, 0.7);
     position: absolute;
     top: 0;
     left: 0;
@@ -78,7 +108,7 @@ nav>div>a {
     text-align: center;
     box-sizing: border-box;
     padding-top: 25px;
-    margin-right: 15px;
+    margin-right:15px;
 }
 nav>div>a::before {
     content: "";
@@ -100,3 +130,31 @@ nav>img {
     right:210px;
 }
 /*****************nav-end*****************/
+/*********网站最后底部注意部分样式**********/
+footer{
+    width:100%;
+    height:140px;
+    box-sizing: border-box;
+    background:#171A21;
+    color:red;
+    text-align: center;
+    font-size:15px;
+    padding-top:10px;
+}
+footer>p{margin-bottom:10px;}
+footer>p:first-child{
+    animation:jb 12s infinite;
+    
+}
+footer>p:nth-child(2){
+    animation: jb 12s 2s infinite;
+}
+footer>p:nth-child(3){
+    animation: jb 12s 4s infinite;
+}
+footer>p:last-child{
+    animation: jb 12s 6s infinite;
+}
+@keyframes jb{
+    50%{color:#171A21;}
+}
