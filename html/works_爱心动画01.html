@@ -33,5 +33,54 @@
 	<iframe src="works/爱心动画1.html">您的浏览器暂不支持iframe标签，请升级或者更换浏览器重试
 	！</iframe>
 </section>
+<section class="daima">
+    <h2>↓代码↓</h2>
+    <pre>
+--------------------------------------------------------------------------------------------------
+                                                HTML
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+    &ltmeta charset="utf-8"/&gt
+    &lttitle&gt跳动的心&lt/title&gt
+    &ltstyle type="text/css"&gt
+    /*背景色*/
+    body{background-image:radial-gradient(circle,pink,#f88);}
+    /*-------------画心-----------*/
+    .xin{width:200px;
+        height:200px;
+        background:tomato;
+        position:fixed;
+        left:42%;top:35%;
+        transform:rotate(-45deg);
+        animation:dh 1.2s ease-in infinite;}
+    .xin:after,.xin:before{
+        content:"";
+        width:200px;
+        height:200px;
+        border-radius:50%;
+        background:tomato;
+        position:absolute;
+    }
+    .xin:after{top:-100px;}
+    .xin:before{right:-100px;}
+    /*-----------END---------------*/
+    /*-----------动画--------------*/
+    @keyframes dh{
+        0%{transform:scale(1) rotate(-45deg);}
+        40%{transform:scale(1) rotate(-45deg);}
+        55%{transform:scale(1.3) rotate(-30deg);}
+        70%{transform:scale(1) rotate(-45deg);}
+        85%{transform:scale(1.3) rotate(-60deg);}
+        100%{transform:scale(1) rotate(-45deg);}
+    }
+    &lt/style&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv class="xin"&gt&lt/div&gt
+&lt/body&gt
+&lt/html&gt
+    </pre>
+</section>
 </body>
 </html>

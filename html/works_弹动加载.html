@@ -33,5 +33,59 @@
 	<iframe src="works/弹动加载动画.html">您的浏览器暂不支持iframe标签，请升级或者更换浏览器重试
 	！</iframe>
 </section>
+<section class="daima">
+    <h2>↓代码↓</h2>
+    <pre>
+--------------------------------------------------------------------------------------------------
+                                                HTML
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+    &ltmeta charset="utf-8"/&gt 
+    &lttitle&gt弹动加载&lt/title&gt
+    &ltstyle type="text/css"&gt
+    body{
+        background:black;
+    }
+    .one{
+        width:500px;
+        height:50px;
+        text-align:center;
+        margin:20% auto;}
+    .donghua{
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        margin-right:4px;
+        display:inline-block;
+        animation:donghua 1s ease-in-out infinite;}
+    @keyframes donghua{
+        0%{transform:translateY(0);opacity:1;}
+        50%{transform:translateY(20px);opacity:0;}
+        100%{transform:translateY(0);opacity:1;}
+        }
+    .one div:nth-of-type(1){background:#f00;}
+    .a{animation-delay:0.2s;background:#f60;}
+    .b{animation-delay:0.4s;background:#ff0;}
+    .c{animation-delay:0.6s;background:#0c0;}
+    .d{animation-delay:0.8s;background:#699;}
+    .e{animation-delay:1s;background:#06c;}
+    .f{animation-delay:1.2s;background:#909;}
+    &lt/style&gt
+&lt/head&gt
+&ltbody&gt
+&ltdiv class="one"&gt
+    &ltdiv class="donghua"&gt&lt/div&gt
+    &ltdiv class="donghua a"&gt&lt/div&gt
+    &ltdiv class="donghua b"&gt&lt/div&gt
+    &ltdiv class="donghua c"&gt&lt/div&gt
+    &ltdiv class="donghua d"&gt&lt/div&gt
+    &ltdiv class="donghua e"&gt&lt/div&gt
+    &ltdiv class="donghua f"&gt&lt/div&gt
+&lt/div&gt
+&lt/body&gt
+&lt/html&gt
+    </pre>
+</section>
 </body>
 </html>

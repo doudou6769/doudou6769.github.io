@@ -23,31 +23,35 @@ nav>div>a:nth-of-type(3)::before {
 	height:9.7%;
 	position:absolute;
 }
-.example>a:first-of-type{
+.example>a:first-of-type{		/*爱心动画1*/
 	left:17.8%;
 	top:13%;
 }
-.example>a:nth-of-type(2){
+.example>a:nth-of-type(2){		/*爱心动画2*/
 	left:30.4%;
 	top:48.1%;
 }
-.example>a:nth-of-type(3){
+.example>a:nth-of-type(3){		/*Win xp*/
 	left:47.2%;
 	top:23.4%;
 }
-.example>a:nth-of-type(4){
+.example>a:nth-of-type(4){		/*弹动加载动画*/
 	width:4.9%;
 	height:8%;
 	left:5.4%;
 	top:44.8%;
 }
-.example>a:nth-of-type(5){
-	left:62.6%;
+.example>a:nth-of-type(5){		/*同心圆加载动画*/
+	left:62.5%;
 	top:18.2%;
-}
-.example>a:nth-of-type(6){
-	left:52%;
+}	
+.example>a:nth-of-type(6){		/*下划线加载动画*/
+	left:51.9%;
 	top:62.25%;
+}
+.example>a:nth-of-type(7){		/*三级下拉菜单*/
+	left:29.4%;
+	top:28.5%;
 }
 .example>a:hover{box-shadow:0 0 3px 3px #fff;}
 .example>a>img{

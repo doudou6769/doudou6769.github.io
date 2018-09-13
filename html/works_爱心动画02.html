@@ -33,5 +33,76 @@
 	<iframe src="works/爱心动画2.html">您的浏览器暂不支持iframe标签，请升级或者更换浏览器重试
 	！</iframe>
 </section>
+<section class="daima">
+    <h2>↓代码↓</h2>
+    <pre>
+--------------------------------------------------------------------------------------------------
+                                                HTML
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+    &ltmeta charset="utf-8"/&gt
+    &lttitle&gt彩色的爱心&lt/title&gt
+    &ltstyle&gt
+    body{background:#666;}
+    div{width:460px;
+        height:300px;
+        margin:12% auto;
+        position:relative;}
+    span{display:inline-block;
+        position:absolute;
+        width:20px;
+        border-radius:20px;
+        animation:donghua 4s ease-in infinite;}
+    span:nth-child(1),span:nth-child(9){
+        height:75px;
+        top:110px;
+        background:orangered;}
+    span:nth-child(1){left:100px;}
+    span:nth-child(9){right:100px;}
+    span:nth-child(2),span:nth-child(8){
+        height:120px;
+        top:90px;
+        background:gold;}
+    span:nth-child(2){left:130px;}
+    span:nth-child(8){right:130px;}
+    span:nth-child(3),span:nth-child(7){
+        height:160px;
+        top:80px;
+        background:limegreen;}
+    span:nth-child(3){left:160px;}
+    span:nth-child(7){right:160px;}
+    span:nth-child(4),span:nth-child(6){
+        height:170px;
+        top:100px;
+        background:dodgerblue;}
+    span:nth-child(4){left:190px;}
+    span:nth-child(6){right:190px;}
+    span:nth-child(5){
+        height:175px;
+        top:125px;
+        left:220px;
+        background:mediumpurple;}
+    @keyframes donghua{
+        50%{top:100px;height:100px;background:#fff;opacity:0.1;}
+    }
+    &lt/style&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv&gt
+        &ltspan&gt&lt/span&gt
+        &ltspan&gt&lt/span&gt
+        &ltspan&gt&lt/span&gt
+        &ltspan&gt&lt/span&gt
+        &ltspan&gt&lt/span&gt
+        &ltspan&gt&lt/span&gt
+        &ltspan&gt&lt/span&gt
+        &ltspan&gt&lt/span&gt
+        &ltspan&gt&lt/span&gt
+    &lt/div&gt
+&lt/body&gt
+&lt/html&gt
+    </pre>
+</section>
 </body>
 </html>
