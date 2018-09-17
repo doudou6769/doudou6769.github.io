@@ -6,7 +6,7 @@
     .father_box {
         width: 350px;
         height: 300px;
-        margin: 10% auto;
+        margin: 4% auto;
         position: relative;
     }
     img {
@@ -55,7 +55,7 @@
         height: 20px;
         border: 1px solid #fff;
         border-radius: 6px;
-        margin: -6% auto;
+        margin: 6% auto;
         padding-top: 4px;
         overflow: hidden;
     }
