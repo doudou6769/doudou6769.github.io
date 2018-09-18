@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>三级下拉菜单</title>
+	<link rel="stylesheet" href="../css/works_index_style.css">
+</head>
+<body>
+<nav>
+	<div class="box shadow">
+        <a href="../index.html">首页</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="works_三级下拉菜单.html">上一个</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="works_CSS时钟.html">下一个</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../html/works.html">返回</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../html/contact_me.html">联系我</a>
+        <div class="circle"></div>
+    </div>
+</nav>
+<section class="zuoping">
+	<img src="../images/电脑框.png">
+	<iframe src="works/clock.html">您的浏览器暂不支持iframe标签，请升级或者更换浏览器重试
+	！</iframe>
+</section>
+<section class="daima">
+    <h2>↓代码↓</h2>
+    <pre>
+--------------------------------------------------------------------------------------------------
+                                                HTML
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gtclock&lt/title&gt
+    &ltstyle type="text/css"&gt
+        body{background:#fff;}
+        .clock{
+            width:400px;
+            height:400px;
+            box-shadow: 0 0 10px #333;
+            margin:80px auto;
+            position: relative;
+        }
+        .dot{
+            width:4px;
+            height:8px;
+            background: #333;
+            position: absolute;
+            top:30px;
+            left:50%;
+            transform-origin: 50% 170px;
+        }
+        .dot:nth-child(1){transform:rotate(6deg);}
+        .dot:nth-child(2){transform:rotate(12deg);}
+        .dot:nth-child(3){transform:rotate(18deg);}
+        .dot:nth-child(4){transform:rotate(24deg);}
+        .dot:nth-child(5){
+            transform:rotate(30deg);
+            height:12px;
+            background:#B4D96F;
+        }
+        .dot:nth-child(6){transform:rotate(36deg);}
+        .dot:nth-child(7){transform:rotate(42deg);}
+        .dot:nth-child(8){transform:rotate(48deg);}
+        .dot:nth-child(9){transform:rotate(54deg);}
+        .dot:nth-child(10){
+            transform:rotate(60deg);
+            height:12px;
+            background:#EEDE89;
+        }
+        .dot:nth-child(11){transform:rotate(66deg);}
+        .dot:nth-child(12){transform:rotate(72deg);}
+        .dot:nth-child(13){transform:rotate(78deg);}
+        .dot:nth-child(14){transform:rotate(84deg);}
+        .dot:nth-child(15){
+            transform:rotate(90deg);
+            height:12px;
+            background: #F28F2F;
+        }
+        .dot:nth-child(16){transform:rotate(96deg);}
+        .dot:nth-child(17){transform:rotate(102deg);}
+        .dot:nth-child(18){transform:rotate(108deg);}
+        .dot:nth-child(19){transform:rotate(114deg);}
+        .dot:nth-child(20){
+            transform:rotate(120deg);
+            height:12px;
+            background:#3FC4C3;
+        }
+        .dot:nth-child(21){transform:rotate(126deg);}
+        .dot:nth-child(22){transform:rotate(132deg);}
+        .dot:nth-child(23){transform:rotate(138deg);}
+        .dot:nth-child(24){transform:rotate(144deg);}
+        .dot:nth-child(25){
+            transform:rotate(150deg);
+            height:12px;
+            background:#B4D96F;
+        }
+        .dot:nth-child(26){transform:rotate(156deg);}
+        .dot:nth-child(27){transform:rotate(162deg);}
+        .dot:nth-child(28){transform:rotate(168deg);}
+        .dot:nth-child(29){transform:rotate(174deg);}
+        .dot:nth-child(30){
+            transform:rotate(180deg);
+            height:12px;
+            background:#F0DF89FF;
+        }
+        .dot:nth-child(31){transform:rotate(186deg);}
+        .dot:nth-child(32){transform:rotate(192deg);}
+        .dot:nth-child(33){transform:rotate(198deg);}
+        .dot:nth-child(34){transform:rotate(204deg);}
+        .dot:nth-child(35){
+            transform:rotate(210deg);
+            height:12px;
+            background:#EF9034;
+        }
+        .dot:nth-child(36){transform:rotate(216deg);}
+        .dot:nth-child(37){transform:rotate(222deg);}
+        .dot:nth-child(38){transform:rotate(228deg);}
+        .dot:nth-child(39){transform:rotate(234deg);}
+        .dot:nth-child(40){
+            transform:rotate(240deg);
+            height:12px;
+            background:#3DC3C4;
+        }
+        .dot:nth-child(41){transform:rotate(246deg);}
+        .dot:nth-child(42){transform:rotate(252deg);}
+        .dot:nth-child(43){transform:rotate(258deg);}
+        .dot:nth-child(44){transform:rotate(264deg);}
+        .dot:nth-child(45){
+            transform:rotate(270deg);
+            height:12px;
+            background: #B7DB78;
+        }
+        .dot:nth-child(46){transform:rotate(276deg);}
+        .dot:nth-child(47){transform:rotate(282deg);}
+        .dot:nth-child(48){transform:rotate(288deg);}
+        .dot:nth-child(49){transform:rotate(294deg);}
+        .dot:nth-child(50){
+            transform:rotate(300deg);
+            height:12px;
+            background:#EFDF87;
+        }
+        .dot:nth-child(51){transform:rotate(306deg);}
+        .dot:nth-child(52){transform:rotate(312deg);}
+        .dot:nth-child(53){transform:rotate(318deg);}
+        .dot:nth-child(54){transform:rotate(324deg);}
+        .dot:nth-child(55){
+            transform:rotate(330deg);
+            height:12px;
+            background:#EF9034;
+        }
+        .dot:nth-child(56){transform:rotate(336deg);}
+        .dot:nth-child(57){transform:rotate(342deg);}
+        .dot:nth-child(58){transform:rotate(348deg);}
+        .dot:nth-child(59){transform:rotate(354deg);}
+        .dot:nth-child(60){
+            transform:rotate(360deg);
+            height:12px;
+            background:#40B8BE;
+        }
+        .clock_center{
+            width:16px;
+            height:16px; 
+            border-radius: 50%;
+            background: #fff;
+            position:absolute;
+            left:50%;
+            top:50%;
+            box-sizing: border-box;
+            border:1px solid black;
+            margin:-8px -8px;
+            z-index: 3;
+        }
+        .hour_hand{
+            width:10px;
+            height:100px;
+            margin:-70px -5px;
+            z-index:3;
+            transform-origin: 50% 70px;
+            animation:xz 43200s linear infinite;
+        }
+        .minute_hand{
+            width:6px;
+            height:150px;
+            margin:-110px -3px;
+            transform-origin: 50% 110px;
+            animation:xz 3600s linear infinite;
+        }
+        .second_hand{
+            width:4px;
+            height:200px;
+            margin:-140px -2px;
+            transform-origin: 50% 140px;
+            animation:xz 60s linear infinite;
+        }
+        .hour_hand,.minute_hand,.second_hand{
+            border-radius: 6px;
+            background:#333;
+            position: absolute;
+            top:50%;
+            left:50%;
+        }
+        @keyframes xz{
+            0%{transform:rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+    &lt/style&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv class="clock"&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="dot"&gt&lt/div&gt
+        &ltdiv class="hour_hand"&gt&lt/div&gt
+        &ltdiv class="minute_hand"&gt&lt/div&gt
+        &ltdiv class="second_hand"&gt&lt/div&gt
+        &ltdiv class="clock_center"&gt&lt/div&gt
+    &lt/div&gt
+&lt/body&gt
+&lt/html&gt
+    </pre>
+</section>
+</body>
+</html>
