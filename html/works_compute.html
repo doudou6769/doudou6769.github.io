@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>三级下拉菜单</title>
+    <link rel="stylesheet" href="../css/1920_1080/works_index_style.css">
+</head>
+<body>
+<nav>
+    <div class="box shadow">
+        <a href="../index.html">首页</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="works_CSS时钟.html">上一个</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="works_compute.html">下一个</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../html/works.html">返回</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../html/contact_me.html">联系我</a>
+        <div class="circle"></div>
+    </div>
+</nav>
+<section class="zuoping">
+    <img src="../images/电脑框.png">
+    <iframe src="works/compute.html">您的浏览器暂不支持iframe标签，请升级或者更换浏览器重试
+    ！</iframe>
+</section>
+<section class="daima">
+    <h2>↓代码↓</h2>
+    <pre>
+--------------------------------------------------------------------------------------------------
+                                                HTML
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gt简易计算器&lt/title&gt
+    &ltstyle type="text/css"&gt
+    *{margin:0;padding:0;}
+        .cal{
+            width:440px;
+            height:250px;
+            border-radius:5px;
+            box-shadow:0 0 10px #333;
+            margin:100px auto;
+            padding-top:40px;
+            box-sizing:border-box;
+        }
+        .cal&gtp{text-align:center;}
+        .cal&gtp&gtspan{font-size:20px;}
+        .cal&gtp&gtinput{
+            width:180px;
+            height:20px;
+        }
+        .cal&gtdiv{
+            width:310px;
+            height:200px;
+            margin:10px auto;
+            padding-left:10px;
+        }
+        .cal&gtdiv&gtinput{
+            width:70px;
+            height:30px;
+            background:#333;
+            color:#fff;
+            border:1px solid #6f6;
+        }
+    &lt/style&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv class="cal"&gt
+        &ltp&gt&ltspan&gt请输入：&lt/span&gt&ltinput type="text" id="in"&gt&lt/p&gt
+        &ltp&gt&ltspan&gt结果是：&lt/span&gt&ltinput type="text" id="result"&gt&lt/p&gt
+        &ltdiv&gt
+            &ltinput type="button" value="1" onclick="add('1')"&gt
+            &ltinput type="button" value="2" onclick="add('2')"&gt
+            &ltinput type="button" value="3" onclick="add('3')"&gt
+            &ltinput type="button" value="+" onclick="add('+')"&gt
+            &ltinput type="button" value="4" onclick="add('4')"&gt
+            &ltinput type="button" value="5" onclick="add('5')"&gt
+            &ltinput type="button" value="6" onclick="add('6')"&gt
+            &ltinput type="button" value="-" onclick="add('-')"&gt
+            &ltinput type="button" value="7" onclick="add('7')"&gt
+            &ltinput type="button" value="8" onclick="add('8')"&gt
+            &ltinput type="button" value="9" onclick="add('9')"&gt
+            &ltinput type="button" value="*" onclick="add('*')"&gt
+            &ltinput type="button" value="0" onclick="add('0')"&gt
+            &ltinput type="button" value="=" onclick="calculate()"&gt
+            &ltinput type="button" value="clear" onclick="clear_input()"&gt
+            &ltinput type="button" value="/" onclick="add('/')"&gt
+        &lt/div&gt
+    &lt/div&gt
+    &ltscript type="text/javascript"&gt
+        /*将输入的值累加成为字符串*/
+        function add(op){
+            document.getElementById('in').value += op;
+        }
+        /*获取并计算输入区的字符串，将返回值打印到输出区*/
+        function calculate(){
+            var exp = document.getElementById('in').value;
+            var sum = eval(exp);
+            document.getElementById('result').value = sum;
+        }
+        /*清空输入区及输出区*/
+        function clear_input() {
+            document.getElementById('in').value = "";
+            document.getElementById('result').value = "";
+        }
+    &lt/script&gt
+&lt/body&gt
+&lt/html&gt
+    </pre>
+</section>
+</body>
+</html>

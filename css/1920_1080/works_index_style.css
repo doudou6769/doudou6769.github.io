@@ -1,0 +1,110 @@
+body {
+    background: antiquewhite;
+    position: relative;
+}
+.zuoping {
+    width: 70%;
+    height: 800px;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+.zuoping>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.zuoping>iframe {
+    width: 93.1%;
+    height: 72%;
+    position: absolute;
+    top: 28px;
+    left: 35px;
+}
+nav {
+    width: 20%;
+    height: 500px;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+}
+.box {
+    width: 60%;
+    min-width: 150px;
+    display: block;
+    height: 50px;
+    position: relative;
+    border-radius: 5px;
+    background: linear-gradient(to right, #abbd73 35%, #d6e2ad 100%);
+    margin-bottom: 40px;
+    padding: 15px 25px 0 40px;
+    color: darkslategray;
+    box-shadow: 1px 2px 1px -1px #777;
+    transition: background 200ms ease-in-out;
+    text-align: right;
+}
+
+.box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.shadow {
+    position: relative;
+}
+.shadow:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 13px;
+    right: 7px;
+    width: 75%;
+    top: 0;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+    transition: all 150ms ease-in-out;
+}
+
+.box:hover {
+    background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
+}
+
+.shadow:hover::before {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    bottom: 20px;
+    z-index: -10;
+}
+
+.circle {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px antiquewhite;
+    /* 设置内阴影以及背景颜色 */
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: right;
+}
+.daima{
+    width:100%;
+    height:100px;
+    position:absolute;
+    top:850px;
+}
+.daima>h2{
+    width:100%;
+    text-align:center;
+    font-size:40px;
+}
+.daima>pre{
+    width:100%;
+    height:auto;
+    padding-left:270px;
+    font-size:20px;
+    box-sizing: border-box;
+}

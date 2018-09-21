@@ -1,0 +1,70 @@
+/*****************************
+ **本文件用于定义网站主页样式 **
+ *****************************/
+
+/*************************
+ *本行用于定义导航栏状态
+ *选中时显示蓝色横条
+ **/
+nav>div>a:nth-of-type(5)::before {
+    background: #13C0E0;
+}
+.update_log {
+    width: 100%;
+    height:auto;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom:40px;
+    /* border:1px solid red; */
+}
+.update_log>div:nth-of-type(1){
+    width: 25vw;
+    height: 10vh;
+    position: relative;
+    margin:20px auto;
+    color: #01F3CB;
+    font-weight: bolder;
+    font-size: 23px;
+    text-align: center;
+    letter-spacing:15px;
+    /* border:1px solid red; */
+}
+.update_log>div:nth-of-type(1)>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 2vh;
+    left: 0;
+}
+
+
+.one{
+    display:block;
+	width:62%;
+	height:auto;
+    margin:0 auto;
+}
+.one:not(:nth-of-type(1)){
+        margin-top:60px;
+}
+.one>p:nth-of-type(1){
+	color:#fff;
+	font-size:20px;
+}
+.one>hr{
+	width:100%;
+	height:3px;
+	background:#f60;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+.one>p:nth-of-type(2)>span{
+	color:#fff;
+	font-size:19px;
+    display: block;
+}
+.one>p:nth-of-type(2)>span:not(:nth-child(1)){
+    margin-left:2em;
+    margin-top:15px;
+    font-size:18px;
+}
