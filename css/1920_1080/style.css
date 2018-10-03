@@ -1,6 +1,7 @@
 /********************************
  **本css文件用于定义网站相同样式
  **所有HTML文件都将引入本css文件
+ **适用分辨率大于1200px
  */
 
 
@@ -23,10 +24,7 @@
 }
 /***************end********************/
 
-a:link,
-a:hover,
-a:visited,
-a:active {
+a{
     text-decoration: none;
 }
 * {
@@ -74,7 +72,6 @@ nav {
 nav>div:first-child {
     color: #fff;
     font-family: "汉仪乐喵体";
-    font-size: 2vw;
     margin: 2vh 0 0 12vw;
 }
 
@@ -143,8 +140,7 @@ footer{
 }
 footer>p{margin-bottom:10px;}
 footer>p:first-child{
-    animation:jb 12s infinite;
-    
+    animation:jb 12s infinite;  
 }
 footer>p:nth-child(2){
     animation: jb 12s 2s infinite;

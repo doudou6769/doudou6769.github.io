@@ -57,11 +57,15 @@ nav>div>a:nth-of-type(2)::before {
 	left:38.4%;
 	top:9%;
 }
-.example>a:nth-of-type(9){
+.example>a:nth-of-type(9){		/*计算器*/
 	width:4.9%;
 	height:8%;
 	left:16%;
 	top:58.5%;
+}
+.example>a:nth-of-type(10){		/*JS时钟*/
+	left:54.55%;
+	top:41.8%;
 }
 .example>a:hover{box-shadow:0 0 3px 3px #fff;}
 .example>a>img{
