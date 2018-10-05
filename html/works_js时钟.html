@@ -2,8 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>三级下拉菜单</title>
-	<link rel="stylesheet" href="../css/1920_1080/works_index_style.css">
+	<title>JS时钟</title>
+	<!-- 屏幕分辨率小于1100px加载 -->
+    <link rel="stylesheet" href="../css/760/works_index.css" media="screen and (max-width: 1199px)">
+    <!-- End -->
+    <!-- 屏幕分辨率大于1200像素 -->
+    <link rel="stylesheet" href="../css/1920_1080/works_index_style.css" media="screen and (min-width: 1200px)">
+    <!-- End -->
 </head>
 <body>
 <nav>
@@ -39,9 +44,9 @@
 </section>
 <section class="daima">
     <h2>↓代码↓</h2>
+    <hr>
     <pre>
---------------------------------------------------------------------------------------------------
-                                                HTML
+
 &lt!DOCTYPE html&gt
 &lthtml lang="en"&gt
 &lthead&gt
@@ -116,7 +121,8 @@
             var temp = "";
             for (var i = 1; i &lt= 60 ; i++) {
                 if(i % 5 == 0)
-                    temp += ".dot:nth-child("+ i +"){transform:rotate(" + i * 6 + "deg);height:12px;background:red;}";
+                    temp += ".dot:nth-child("+ i +"){transform:rotate(" + i * 6 + "deg);
+                    height:12px;background:red;}";
                 else
                     temp += ".dot:nth-child("+ i +"){transform:rotate(" + i * 6 +"deg)}";
             }
@@ -198,9 +204,12 @@
         var hours = now.getHours();
         var minutes = now.getMinutes();
         var seconds = now.getSeconds();
-        document.getElementById("seconds").style.transform = "rotate(" + seconds * 6 + "deg)";
-        document.getElementById("minutes").style.transform = "rotate(" + (minutes + seconds / 60) * 6 + "deg)";
-        document.getElementById("hours").style.transform = "rotate(" + (hours + minutes / 60 + seconds / 3600) * 30 + "deg)";
+        document.getElementById("seconds").style.transform = "rotate(" + 
+        seconds * 6 + "deg)";
+        document.getElementById("minutes").style.transform = "rotate(" + 
+        (minutes + seconds / 60) * 6 + "deg)";
+        document.getElementById("hours").style.transform = "rotate(" + 
+        (hours + minutes / 60 + seconds / 3600) * 30 + "deg)";
         setTimeout(getTime,1000);
     }
     getTime();
