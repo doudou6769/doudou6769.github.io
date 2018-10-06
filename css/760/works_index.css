@@ -15,11 +15,11 @@ body {
     position: absolute;
 }
 .zuoping>iframe {
-    width: 93%;
+    width: 94%;
     height: 72%;
     position: absolute;
     top: 28px;
-    left: 30px;
+    left: 3%;
 }
 nav {
     width: 17%;
