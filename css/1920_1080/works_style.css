@@ -42,11 +42,11 @@ nav>div>a:nth-of-type(2)::before {
 	top:44.8%;
 }
 .example>a:nth-of-type(5){		/*同心圆加载动画*/
-	left:62.5%;
+	left:62.6%;
 	top:18.2%;
 }	
 .example>a:nth-of-type(6){		/*下划线加载动画*/
-	left:51.9%;
+	left:51.96%;
 	top:62.25%;
 }
 .example>a:nth-of-type(7){		/*三级下拉菜单*/
@@ -54,7 +54,7 @@ nav>div>a:nth-of-type(2)::before {
 	top:28.5%;
 }
 .example>a:nth-of-type(8){		/*CSS时钟*/
-	left:38.4%;
+	left:38.5%;
 	top:9%;
 }
 .example>a:nth-of-type(9){		/*计算器*/
@@ -67,6 +67,15 @@ nav>div>a:nth-of-type(2)::before {
 	left:54.55%;
 	top:41.8%;
 }
+.example>a:nth-of-type(11){		/*轮播图*/
+	left:15.8%;
+	top:32.6%;
+}
+.example>a:nth-of-type(12){
+	left:43.15%;
+	top:50.5%;
+}
+.example>a:nth-of-type
 .example>a:hover{box-shadow:0 0 3px 3px #fff;}
 .example>a>img{
 	width:100%;

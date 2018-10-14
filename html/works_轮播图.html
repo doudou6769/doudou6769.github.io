@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>轮播图</title>
+	<!-- 屏幕分辨率小于1100px加载 -->
+    <link rel="stylesheet" href="../css/760/works_index.css" media="screen and (max-width: 1199px)">
+    <!-- End -->
+    <!-- 屏幕分辨率大于1200像素 -->
+    <link rel="stylesheet" href="../css/1920_1080/works_index_style.css" media="screen and (min-width: 1200px)">
+    <!-- End -->
+</head>
+<body>
+<nav>
+	<div class="box shadow">
+        <a href="../index.html">首页</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="works_js时钟.html">上一个</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="works_选号器.html">下一个</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../html/works.html">返回</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../html/contact_me.html">联系我</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../download/焦点图（轮播图）.rar">源码下载</a>
+        <div class="circle"></div>
+    </div>
+</nav>
+<section class="zuoping">
+	<img src="../images/电脑框.png">
+	<iframe src="works/焦点图（轮播图）/index.html">您的浏览器暂不支持iframe标签，请升级或者更换浏览器重试
+	！</iframe>
+</section>
+<section class="daima">
+    <h2>↓代码↓</h2>
+    <hr>
+    <pre>
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gt汽车&lt/title&gt
+    &ltstyle type="text/css"&gt
+        .win{
+            position:relative;
+            width: 600px;
+            height:300px;
+            margin:100px auto;
+            box-shadow: 0 0 15px #333;
+            overflow:hidden;
+            border-radius:15px;
+        }
+        .wrapper{
+            position:absolute;
+            width:500%;
+            height:300px;
+            font-size:0;
+            top:0;
+            left:0;
+            transition:0.5s;
+        }
+        .wrapper img{
+            width:600px;
+            height:300px;
+        }
+        .circles{
+            position:absolute;
+            bottom:0;
+            width:100%;
+            text-align:center;
+            background: rgba(200,200,200,0.5);
+        }
+        .circle{
+            display: inline-block;
+            width:10px;
+            height: 10px;
+            border:1px solid #fff;
+            border-radius:50%;
+            margin:5px 6px;
+        }
+    &lt/style&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv class="win"&gt
+        &ltdiv class="wrapper" id="wrapper"&gt
+            &ltimg src="images/car1.jpg"&gt
+            &ltimg src="images/car2.jpg"&gt
+            &ltimg src="images/car3.jpg"&gt
+            &ltimg src="images/car4.jpg"&gt
+            &ltimg src="images/car5.jpg"&gt
+        &lt/div&gt
+        &ltdiv class="circles" id="c"&gt
+            &ltdiv class="circle" id="c0"&gt&lt/div&gt
+            &ltdiv class="circle" id="c1"&gt&lt/div&gt
+            &ltdiv class="circle" id="c2"&gt&lt/div&gt
+            &ltdiv class="circle" id="c3"&gt&lt/div&gt
+            &ltdiv class="circle" id="c4"&gt&lt/div&gt
+        &lt/div&gt
+    &lt/div&gt
+    &ltscript type="text/javascript"&gt
+    function win(){
+        var current_pic = 0;
+        var wrapper = document.getElementById("wrapper");
+        var timer;
+        /* 设置轮播效果 */
+        function showNext(){
+            document.getElementById("c"+current_pic).style.background = "none";
+            current_pic++;
+            current_pic %= 5;
+            document.getElementById("c"+current_pic).style.background = "#fff";
+            wrapper.style.left = "-" + current_pic * 600 + "px";
+            timer = setTimeout(showNext,2000);
+        }
+        timer = setTimeout(showNext,2000);
+        document.getElementById("c"+current_pic).style.background = "#fff";
+        /* 停止轮播效果 */
+        function stopPlay(){
+            clearTimeout(timer);
+        }
+        /* 设置监听事件 */
+        wrapper.addEventListener("mouseover",stopPlay);
+        wrapper.addEventListener("mouseout",showNext);
+        /* 设置鼠标悬停跳到指定页 */
+        function goto(a){
+            clearTimeout(timer);
+            document.getElementById("c"+current_pic).style.background = "none";
+            current_pic = a;
+            document.getElementById("c"+current_pic).style.background = "#fff";
+            wrapper.style.left = "-" + current_pic * 600 + "px";
+        }
+        var c0 = document.getElementById("c0");
+        var c1 = document.getElementById("c1");
+        var c2 = document.getElementById("c2");
+        var c3 = document.getElementById("c3");
+        var c4 = document.getElementById("c4");
+
+        c0.addEventListener("mouseover",function(){goto(0);})
+        c1.addEventListener("mouseover",function(){goto(1);})
+        c2.addEventListener("mouseover",function(){goto(2);})
+        c3.addEventListener("mouseover",function(){goto(3);})
+        c4.addEventListener("mouseover",function(){goto(4);})
+
+        c0.addEventListener("mouseout",showNext);
+        c1.addEventListener("mouseout",showNext);
+        c2.addEventListener("mouseout",showNext);
+        c3.addEventListener("mouseout",showNext);
+        c4.addEventListener("mouseout",showNext);
+    }
+    win();
+    &lt/script&gt
+&lt/body&gt
+&lt/html&gt
+    </pre>
+</section>
+</body>
+</html>

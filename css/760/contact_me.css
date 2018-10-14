@@ -56,3 +56,36 @@ nav>div>a:nth-of-type(3)::before {
 	width:22vh;
 }
 .QQ>p>a{color:#25C6FC;}
+
+.map{
+	width:100%;
+	height:800px;
+	position:relative;
+	box-sizing:border-box;
+	background:#171A21;
+	margin:30px 0;
+	padding:20px;
+}
+.map>div:nth-of-type(1) {
+    width: 25vw;
+    height: 10vh;
+    position: relative;
+    margin:20px auto;
+    color: #01F3CB;
+    font-weight: bolder;
+    font-size: 23px;
+    text-align: center;
+    letter-spacing:15px;
+}
+.map>div:nth-of-type(1)>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -1vh;
+    left: 0;
+}
+#container{
+	margin:-50px auto;
+	width:80%;
+	height:550px;
+}

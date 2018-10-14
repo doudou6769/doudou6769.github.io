@@ -10,11 +10,13 @@ nav>div>a:nth-of-type(3)::before {
     background: #13C0E0;
 }
 .wenzi{
-	width:36%;
+	width:100%;
 	height:200px;
 	color:#fff;
 	position:relative;
-	margin:30px 0 0 32%;
+	margin:40px 0;
+	padding:20px 0;
+	background:#171A21;
 }
 .wenzi p{
 	font-family: "卡通";
@@ -38,19 +40,20 @@ nav>div>a:nth-of-type(3)::before {
 	color:#9A04FC;
 }
 .erweima{
-	width:60%;
+	width:100%;
 	height:400px;
 	position:relative;
-	margin:30px 0 0 20%;
+	text-align:center;
 	color:#25C6FC;
 	font-family: "剪纸";
+	background:#171A21;
+	margin:40px 0;
+	padding:20px 0;
 }
 .erweima>div{
 	display:inline-block;
 	width:40%;
 	height:100%;
-	float:left;
-	margin-right:10%;
 }
 .erweima>div>p{
 	text-align: center;
@@ -58,7 +61,39 @@ nav>div>a:nth-of-type(3)::before {
 	margin-bottom:25px;
 }
 .erweima>div>img{
-	width:80%;
+	width:50%;
 	height:80%;
-	margin-left:10%;
+}
+
+.map{
+	width:100%;
+	height:800px;
+	position:relative;
+	box-sizing:border-box;
+	background:#171A21;
+	margin:30px 0;
+	padding:20px;
+}
+.map>div:nth-of-type(1) {
+    width: 25vw;
+    height: 10vh;
+    position: relative;
+    margin:20px auto;
+    color: #01F3CB;
+    font-weight: bolder;
+    font-size: 23px;
+    text-align: center;
+    letter-spacing:15px;
+}
+.map>div:nth-of-type(1)>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 2vh;
+    left: 0;
+}
+#container{
+	margin:0 auto;
+	width:80%;
+	height:550px;
 }
