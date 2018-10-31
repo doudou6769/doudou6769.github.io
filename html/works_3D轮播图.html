@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>选号器</title>
+	<!-- 屏幕分辨率小于1100px加载 -->
+    <link rel="stylesheet" href="../css/760/works_index.css" media="screen and (max-width: 1199px)">
+    <!-- End -->
+    <!-- 屏幕分辨率大于1200像素 -->
+    <link rel="stylesheet" href="../css/1920_1080/works_index_style.css" media="screen and (min-width: 1200px)">
+    <!-- End -->
+</head>
+<body>
+<nav>
+	<div class="box shadow">
+        <a href="../index.html">首页</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="works_轮播图.html">上一个</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="works_紫色渐变登录页面.html">下一个</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../html/works.html">返回</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../html/contact_me.html">联系我</a>
+        <div class="circle"></div>
+    </div>
+    <div class="box shadow">
+        <a href="../download/3D轮播（长方形）.rar">源码下载</a>
+        <div class="circle"></div>
+    </div>
+</nav>
+<section class="zuoping">
+	<img src="../images/电脑框.png">
+	<iframe src="works/3D轮播（长方形）/index.html">您的浏览器暂不支持iframe标签，请升级或者更换浏览器重试
+	！</iframe>
+</section>
+<section class="daima">
+    <h2>↓代码↓</h2>
+    <hr>
+    <pre>
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gt3D轮播图&lt/title&gt
+    &ltstyle type="text/css"&gt
+        .swipe{
+            width:500px;
+            height:300px;
+            box-sizing: border-box;
+            transition:0.4s;
+            transform-style: preserve-3d;
+        }
+        .swipe img{
+            position:absolute;
+            width:500px;
+            height:300px;
+        }
+        .swipe img:nth-child(1){
+            transform:translate3d(0,0,150px);
+        }
+        .swipe img:nth-child(2){
+            transform:translate3d(0,0,-150px) rotateX(180deg);
+        }
+        .swipe img:nth-child(3){
+            transform: translate3d(0,150px,0) rotateX(-90deg);
+        }
+        .swipe img:nth-child(4){
+            transform:translate3d(0,-150px,0) rotateX(90deg);
+        }
+        .one{
+            width:500px;
+            height:300px;
+            border:10px solid #aaa;
+            margin:50px auto;
+        }
+    &lt/style&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv class="one"&gt
+        &ltdiv class="swipe" id="swipe"&gt
+            &ltimg src="images/img1.jpg"&gt
+            &ltimg src="images/img2.jpg"&gt
+            &ltimg src="images/img3.jpg"&gt
+            &ltimg src="images/img4.jpg"&gt
+        &lt/div&gt
+    &lt/div&gt
+    &ltscript&gt
+        var swipe = document.getElementById("swipe");
+        var i = 0;
+        function showNext(){
+            i += 90;
+            swipe.style.transform = "rotateX(-" + i + "deg)"
+        }
+        setInterval(showNext,2000);
+    &lt/script&gt
+&lt/body&gt
+&lt/html&gt
+    </pre>
+</section>
+</body>
+</html>

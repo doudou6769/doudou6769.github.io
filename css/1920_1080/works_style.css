@@ -75,7 +75,10 @@ nav>div>a:nth-of-type(2)::before {
 	left:43.15%;
 	top:50.5%;
 }
-.example>a:nth-of-type
+.example>a:nth-of-type(13){
+	left:61.1%;
+	top:48.4%;
+}
 .example>a:hover{box-shadow:0 0 3px 3px #fff;}
 .example>a>img{
 	width:100%;
