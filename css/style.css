@@ -145,7 +145,7 @@ html,body{height:100%;font-family: "微软雅黑";}
 #foot_right .row div:last-child ul li{margin-top:5px;}
 .foot{
 	position:fixed;
-	bottom:0;
+	top:0;
 	left:50%;
 	height:5px;
 	background:#5ed5d1;
