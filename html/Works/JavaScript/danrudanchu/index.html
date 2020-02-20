@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jQuery/jquery-2.1.4/jquery.min.js"></script>
+	<style>
+		.warpper{
+			position:relative;
+			width:800px;
+			height:400px;
+			margin:100px auto;
+		}
+		.warpper img{
+			position:absolute;
+			top:0;left:0;
+			width:100%;
+			height:100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="warpper">
+		<img src="images/car1.jpg">
+		<img src="images/car2.jpg">
+		<img src="images/car3.jpg">
+		<img src="images/car4.jpg">
+		<img src="images/car5.jpg">
+	</div>
+	<script>
+		var img_length = $("img").length;
+		for(var i = 1; i < img_length; i++){
+			$("img:eq("+i+")").css("display","none");
+		}
+		var index = 0;
+		function autoPlay(){
+			setInterval(function(){
+				index++;
+				index %= 5;
+				selectImg(index);
+			},2500);
+		}
+		function selectImg(index){
+			var curImg = $("img").eq(index)
+			curImg.fadeIn(800);
+			curImg.siblings().fadeOut(800);
+
+		}
+		autoPlay();
+	</script>
+</body>
+</html>

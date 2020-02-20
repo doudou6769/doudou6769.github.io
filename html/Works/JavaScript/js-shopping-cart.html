@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{padding:0;margin:0;}
+		.container{
+			width:600px;
+			height: 700px;
+			margin:20px auto;
+		}
+		table{width:100%;}
+		table tr{
+			display: inline-block;
+			border-bottom:1px solid #bbb;
+			text-align: right;
+		}
+		table tr td{
+			width:100px;
+			height:40px;
+		}
+		table tr td:first-child{width:80px;}
+		table tr span{
+			display: inline-block;
+			text-align: center;
+			width:60px;
+			height:30px;
+			line-height: 30px;
+			color:#fff;
+			border-radius:5px;
+			cursor: pointer;
+		}
+		table tr:nth-child(even) span{background: red;}
+		table tr:nth-child(odd):not(:first-child) span{background: green;}
+		.container>p{
+			float:right;
+			margin:10px 10px 0 0;
+		}
+		.clear{clear: both;margin-bottom:20px;}
+
+		.add-book{
+			width:100%;
+			height:30px;
+			border-bottom:1px solid #bbb;
+			line-height: 30px;
+		}
+		.book-name,.book-author,.book-price{
+			width:100%;
+			height:50px;
+			margin-top:15px;
+		}
+		.book-name>input,.book-author>input,.book-price>input{
+			display: block;
+			width:100%;
+			height:25px;
+			margin-top:5px;
+			outline: none;
+			border:1px solid #bbb;
+			border-radius: 3px;
+		}
+		input[type=button]{
+			width:100%;
+			height:25px;
+			margin-top:20px;
+			background:#445887;
+			border:none;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<table id="table">
+			<caption>您的购物车详情</caption>
+			<tr>
+				<td><input type="checkbox" id="all">全选</td>
+				<td>序号</td>
+				<td>书名</td>
+				<td>作者</td>
+				<td>价格</td>
+				<td>操作</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="book"></td>
+				<td>1</td>
+				<td>红楼梦</td>
+				<td>曹雪芹</td>
+				<td>32</td>
+				<td><span name="del">删除</span></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="book"></td>
+				<td>2</td>
+				<td>西游记</td>
+				<td>吴承恩</td>
+				<td>36</td>
+				<td><span name="del">删除</span></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="book"></td>
+				<td>3</td>
+				<td>水浒传</td>
+				<td>施耐庵</td>
+				<td>40</td>
+				<td><span name="del">删除</span></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="book"></td>
+				<td>4</td>
+				<td>三国演义</td>
+				<td>罗贯中</td>
+				<td>35</td>
+				<td><span name="del">删除</span></td>
+			</tr>
+		</table>
+		<p>总价：<span id="total_price">00</span></p>
+		<div class="clear"></div>
+
+		<div class="add-book">添加书籍</div>
+		<div class="book-name">书名<input type="text" id="book_name"></div>
+		<div class="book-author">作者<input type="text" id="book_author"></div>
+		<div class="book-price">价格<input type="text" id="book_price"></div>
+		<input type="button" value="添加" onclick="addRow()">
+	</div>
+	<script>
+	var rows = 4;
+	function fun(){
+		var all = document.getElementById("all");
+		var books = document.getElementsByName("book");
+		var total_price = document.getElementById("total_price");
+		var dels = document.getElementsByName("del");
+
+		for (var i = 0; i < books.length; i++) {
+			books[i].addEventListener("click",function(){
+				if(this.checked){
+					var price = Number(this.parentNode.parentNode.getElementsByTagName("td")[4].innerHTML);
+					var cur_total_price = Number(total_price.innerHTML);
+					total_price.innerHTML = price + cur_total_price;
+				}
+				else{
+					var price = Number(this.parentNode.parentNode.getElementsByTagName("td")[4].innerHTML);
+					var cur_total_price = Number(total_price.innerHTML);
+					total_price.innerHTML = cur_total_price - price;
+				}
+			});
+			books[i].addEventListener("click",function(){
+				for(var j = 0; j < books.length; j++){
+					if(books[j].checked == false){
+						all.checked = false;
+						return;
+					}
+					all.checked = true;
+				}
+			});
+		}
+		all.addEventListener("click",function(){
+			if(all.checked){
+				for(var i = 0; i < books.length; i++){
+					books[i].checked = true;
+					var price = Number(books[i].parentNode.parentNode.getElementsByTagName("td")[4].innerHTML);
+					var cur_total_price = Number(total_price.innerHTML);
+					total_price.innerHTML = price + cur_total_price;
+				}
+			}
+		});
+		for (var i = 0; i < dels.length; i++) {
+			dels[i].addEventListener("click",function(){
+				rows--;
+				var tr = this.parentNode.parentNode;
+				var trs = document.getElementsByTagName("tr");
+				tr.parentNode.removeChild(tr);
+				for (var j = 1; j < trs.length; j++) {
+					trs[j].getElementsByTagName("td")[1].innerHTML = j;
+				}
+
+				var ck = this.parentNode.parentNode.getElementsByTagName("td")[0].getElementsByTagName("input")[0];
+				if(ck.checked){
+					console.log(this.parentNode.parentNode.getElementsByTagName("td")[0].getElementsByTagName("input")[0]);
+					var price = Number(this.parentNode.parentNode.getElementsByTagName("td")[4].innerHTML);
+					var cur_total_price = Number(total_price.innerHTML);
+					total_price.innerHTML = cur_total_price - price;
+				}
+			});
+		};
+	}
+	fun();
+	function addRow(){
+		rows++;
+		var book_name = document.getElementById("book_name").value;
+		var book_author = document.getElementById("book_author").value;
+		var book_price = document.getElementById("book_price").value;
+		var tr = document.createElement("tr");
+		tr.innerHTML = '<td><input type="checkbox" name="book"></td>\
+			<td>'+rows+'</td>\
+			<td>'+book_name+'</td>\
+			<td>'+book_author+'</td>\
+			<td>'+book_price+'</td>\
+			<td><span name="del">删除</span></td>';
+		var table = document.getElementsByTagName("table")[0];
+		table.lastChild.appendChild(tr);
+		clearInput();
+	}
+	function clearInput(){
+		document.getElementById("book_name").value = "";
+		document.getElementById("book_author").value = "";
+		document.getElementById("book_price").value = "";
+	}
+	</script>
+</body>
+</html>

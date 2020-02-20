@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#canvas{
+			position:absolute;
+			top:80px;
+			left:50%;
+			margin-left:-200px;
+		}
+	</style>
+</head>
+<body>
+	<h2 style="text-align: center">使用canvas画一个七巧板</h2>
+	<canvas id="canvas" width="400" height="400">您的浏览器不支持canvas标签</canvas>
+	<script>
+		var context = document.getElementById("canvas").getContext("2d");
+		//存放绘制每个图形需要移动的坐标点以及相应图形的颜色
+		var dots = [
+			[[0,0],[400,0],[200,200],[0,0],"#ecf752"],	
+			[[0,0],[200,200],[0,400],[0,0],"#79e8d0"],
+			[[400,0],[300,100],[400,200],[400,0],"#ffb8b8"],
+			[[200,200],[300,300],[100,300],[200,200],"#86e65a"],
+			[[400,200],[400,400],[200,400],[400,200],"#24d197"],
+			[[300,100],[400,200],[300,300],[200,200],[300,100],"#c7e1f0"],
+			[[0,400],[100,300],[300,300],[200,400],[0,400],"#faae4e"],
+		]
+		//绘制方法
+		function mapping(){
+			for(var i = 0; i < dots.length; i++){
+				context.beginPath();								//定义状态设置开始	
+				context.moveTo(dots[i][0][0],dots[i][0][1]);		//设置绘制起点
+				for(var j = 1; j < dots[i].length - 1; j++){
+					context.lineTo(dots[i][j][0],dots[i][j][1]);	//设置绘制路径（数据来自dots三维数组）	
+				}
+				context.closePath();								//定义状态设置结束
+				context.fillStyle = dots[i][dots[i].length - 1];	//定义图形的颜色（数据来自dots[i]的最后一个元素）
+				context.fill();										//调用方法根据设置好的状态绘制图形
+			}
+		}
+		mapping();	//调用绘制方法
+	</script>
+</body>
+</html>

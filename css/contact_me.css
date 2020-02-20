@@ -1,0 +1,50 @@
+/*导航栏激活状态*/
+#nav li:nth-child(5) ::before{background:#6ff;}
+.title-wrapper{
+	position:relative;
+	width:200px;
+	height:90px;
+}
+.title-wrapper .t-top{
+	position:absolute;
+	top:30px;
+	width:120px;
+	height:40px;
+	color:#fff;
+	font-size:18px;
+	text-align: center;
+	line-height:40px;
+	z-index: 9;
+}
+.title-wrapper .t-bottom{
+	position:absolute;
+	top:15px;
+	left:15px;
+	width:120px;
+	height:40px;
+}
+.jbxx .t-top{background: #3bd9d6}
+.jbxx .t-bottom{border:5px solid #abfffe;}
+.erweima .t-top{background:#3cf;}
+.erweima .t-bottom{border:5px solid #19e4ff;}
+#info{width:100%;margin:30px 0;font-family: "卡通";}
+#info>div:first-child>div,.erweima{
+	font-size:25px;
+	line-height:40px;
+}
+#info img{width:75%;}
+@media (max-width: 768px){#info>div:first-child>div{font-size:19px;}}
+#info>div:first-child>div:nth-child(2){color:#029ed9;}
+#info>div:first-child>div:nth-child(3){color:#81ff38;}
+#info>div:first-child>div:nth-child(4){color:#ff7438;}
+#info>div:first-child>div:nth-child(5){color:#ff4238;}
+#info>div:first-child>div:nth-child(6){color:#a3159a;}
+#my_location{width:100%;font-family: "卡通";margin-bottom:30px;}
+.location{margin-left:15px;}
+.location .t-top{background:#9ec4f6;}
+.location .t-bottom{border:5px solid #a5eaff;}
+#container{
+	width:100%;
+	height:550px;
+	margin-left:25px;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>春节倒计时</title>
+	<style type="text/css">
+		.time{
+			text-align:center;
+			margin-top:50px;
+			font-size:25px;
+		}
+		.time span{
+			color:red;
+			font-size:25px;
+		}
+		.count_down{
+			text-align:center;
+			margin-top:150px;
+			font-size:25px;
+		}
+		.count_down span{
+			color:blue;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div class="time">
+		现在是：
+		<span id="y"></span>年
+		<span id="m"></span>月
+		<span id="d"></span>日
+		<span id="h"></span>时
+		<span id="mi"></span>分
+		<span id="s"></span>秒
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		星期<span id="da"></span>
+	</div>	
+	<div class="count_down">
+		<h1>倒计时</h1>
+		距离春节还有：
+		<span id="day"></span>天
+		<span id="hours"></span>时
+		<span id="minutes"></span>分
+		<span id="seconds"></span>秒
+	</div>
+
+	<script type="text/javascript">
+	function getTime(){
+		var now = new Date();
+		var year = now.getFullYear();
+		var month = now.getMonth() + 1;
+		var date = now.getDate();
+		var hours = now.getHours();
+		var minutes = now.getMinutes();
+		var seconds = now.getSeconds();
+		var day = now.getDay();
+
+		if(month < 10){
+			month = "0" + month;
+		}
+		if(date < 10){
+			date = "0" + date;
+		}
+		if(hours < 10){
+			hours = "0" + hours;
+		}
+		if(minutes < 10){
+			minutes = "0" + minutes;
+		}
+		if(seconds < 10){
+			seconds = "0" + seconds;
+		}
+		switch(day){
+			case 0:
+				day = "天";
+				break;
+			case 1:
+				day = "一";
+				break;
+			case 2:
+				day = "二";
+				break;
+			case 3:
+				day = "三";
+				break;
+			case 4:
+				day = "四";
+				break;
+			case 5:
+				day = "五";
+				break;
+			default:
+				day = "六";
+		}
+		document.getElementById('y').innerHTML = year;
+		document.getElementById('m').innerHTML = month;
+		document.getElementById('d').innerHTML = date;
+		document.getElementById('h').innerHTML = hours;
+		document.getElementById('mi').innerHTML = minutes;
+		document.getElementById('s').innerHTML = seconds;
+		document.getElementById('da').innerHTML = day;
+		setTimeout(getTime,1000);
+	}
+
+	function countDown(){
+		var now = new Date();
+		var newyear = new Date(2019,2,5,0,0,0,0);
+		var distance = newyear.getTime() - now.getTime();
+		var day = parseInt(distance/1000/3600/24);
+		var hours = parseInt(distance%(1000*3600*24)/1000/3600);
+		var minutes = parseInt(distance%(1000*3600)/1000/60);
+		var seconds = parseInt(distance%(1000*60)/1000);
+		if(day < 10){
+			day = "0" + day;
+		}
+		if(hours < 10){
+			hours = "0" + hours;
+		}
+		if(minutes < 10){
+			minutes = "0" + minutes;
+		}
+		if(seconds < 10){
+			seconds = "0" + seconds;
+		}
+		document.getElementById('day').innerHTML = day;
+		document.getElementById('hours').innerHTML = hours;
+		document.getElementById('minutes').innerHTML = minutes;
+		document.getElementById('seconds').innerHTML = seconds;
+		setTimeout(countDown,1000);
+	}
+	getTime();
+	countDown();
+	</script>
+</body>
+</html>

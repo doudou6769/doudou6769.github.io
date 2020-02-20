@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.one{
+			position:relative;
+			width:500px;
+			height:300px;
+			margin:100px auto;
+			overflow: hidden;
+		}
+		.one img{
+			width:100%;
+			height: 100%;
+			transition:all 0.5s;
+		}
+		.one .warpper{
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:rgba(100,100,100,0);
+			transition:all 0.5s;
+		}
+		.one .warpper .in{
+			position:absolute;
+			left:50%;
+			margin-left: -40%;
+			margin-top:30px;
+			width:80%;
+			height:80%;
+			background:rgba(30,30,30,0.4);
+			padding:20px 0 0 20px;
+			box-sizing: border-box;
+			color:#fff;
+			opacity:0;
+			transform:scale(1.3,1.3);
+			transition:all 0.5s;
+
+		}
+		.one:hover img{
+			transform:scale(1.3,1.3);
+		}
+		.one:hover  .warpper{
+			background: rgba(100,100,100,0.7);
+		}
+		.one:hover .warpper .in {
+			transform: scale(1,1);
+			opacity:1;
+		}
+	</style>
+</head>
+<body>
+	<div class="one">
+		<img src="img1.jpg">
+		<div class="warpper"><div class="in">汽车</div></div>
+	</div>
+</body>
+</html>

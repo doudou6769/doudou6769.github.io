@@ -1,0 +1,61 @@
+/*导航栏激活状态*/
+#nav li:nth-child(2) ::before{background:#6ff;}
+#h5,#js{
+	width:100%;
+	margin-bottom:30px;
+}
+#h5 .row,#js .row{height:250px;}
+#h5 .row>div,#js .row>div{
+	position:relative;
+	height:100%;
+	padding:5px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+#h5 .row div img,#js .row div img{
+	width:100%;
+	height:100%;
+	transition:all 0.2s;
+}
+#h5 .row div .warpper,#js .row div .warpper{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(100,100,100,0);
+	transition:all 0.2s;
+}
+#h5 .row div .warpper .in,#js .row div .warpper .in{
+	 position:absolute;
+	left:50%;
+	margin-left: -40%;
+	top:50%;
+	margin-top:-95px;
+	width:80%;
+	height:80%;
+	background:rgba(30,30,30,0.4);
+	box-sizing: border-box;
+	padding:10px 0 0 10px;
+	color:#fff;
+	opacity:0;
+	transform:scale(1.2,1.2);
+	transition:all 0.2s;
+}
+#h5 .row div .warpper .in a:nth-of-type(1),#js .row div .warpper .in a:nth-of-type(1){
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
+#h5 .row div .warpper .in a:nth-of-type(2),#js .row div .warpper .in a:nth-of-type(2){
+	position:absolute;
+	bottom:20px;
+	right:90px;
+}
+#h5 .row div:hover img,#js .row div:hover img{transform:scale(1.2,1.2);}
+#h5 .row div:hover  .warpper,#js .row div:hover  .warpper{background: rgba(100,100,100,0.7);}
+#h5 .row div:hover .warpper .in ,#js .row div:hover .warpper .in {
+	transform: scale(1,1);
+	opacity:1;
+}
+

@@ -1,0 +1,28 @@
+/*导航栏激活状态*/
+#nav li:last-child ::before{background:#6ff;}
+.time-line{width:100%;}
+.title-wrapper{
+	position:relative;
+	width:200px;
+	height:90px;
+}
+.title-wrapper .t-top{
+	position:absolute;
+	top:30px;
+	width:120px;
+	height:40px;
+	background:#3bd9d6;
+	color:#fff;
+	font-size:18px;
+	text-align: center;
+	line-height:40px;
+	z-index: 9;
+}
+.title-wrapper .t-bottom{
+	position:absolute;
+	top:15px;
+	left:15px;
+	width:120px;
+	height:40px;
+	border:5px solid #abfffe;
+}

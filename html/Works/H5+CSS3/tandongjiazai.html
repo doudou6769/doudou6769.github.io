@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/> 
+	<title>弹动加载</title>
+	<style type="text/css">
+	.one{
+		width:500px;
+		height:50px;
+		text-align:center;
+		margin:20% auto;}
+	.donghua{
+		width:20px;
+		height:20px;
+		border-radius:50%;
+		margin-right:4px;
+		display:inline-block;
+		animation:donghua 1s ease-in-out infinite;}
+	@keyframes donghua{
+		0%{transform:translateY(0);opacity:1;}
+		50%{transform:translateY(20px);opacity:0;}
+		100%{transform:translateY(0);opacity:1;}
+		}
+	.one div:nth-of-type(1){background:#f00;}
+	.a{animation-delay:0.2s;background:#f60;}
+	.b{animation-delay:0.4s;background:#ff0;}
+	.c{animation-delay:0.6s;background:#0c0;}
+	.d{animation-delay:0.8s;background:#699;}
+	.e{animation-delay:1s;background:#06c;}
+	.f{animation-delay:1.2s;background:#909;}
+	</style>
+</head>
+<body>
+<div class="one">
+	<div class="donghua"></div>
+	<div class="donghua a"></div>
+	<div class="donghua b"></div>
+	<div class="donghua c"></div>
+	<div class="donghua d"></div>
+	<div class="donghua e"></div>
+	<div class="donghua f"></div>
+</div>
+</body>
+</html>

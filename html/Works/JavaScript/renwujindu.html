@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="fa/css/font-awesome.css">
+	<style>
+	body{background:#fffff6;}
+	*{margin:0;padding:0; font:14px "微软雅黑";}
+		.container{
+			width:900px;
+			height:300px;
+			margin:100px auto;
+			background-color: #fff;
+		}
+		.container .con-top{
+			width:100%;
+			height:40px;
+			padding-top:10px;
+		}
+		.con-top>select{
+			width:300px;
+			height:25px;
+			margin-left:10px;
+		}
+		.con-top>input{
+			width:150px;
+			height:25px;
+			border:1px solid #bbb;
+			box-sizing: border-box;
+			float:right;
+			margin:-1px 10px 0 0;
+		}
+		table{width:100%;border-spacing: 0;}
+		table tr{width:100%;height:40px;}
+		table tr:first-child td{font-weight: bold;}
+		table tr:nth-child(2n){background:#eee;}
+		table tr>td:first-child{width:80px;}
+		table tr>td:nth-child(3),table tr>td:nth-child(4){width:90px;}
+		.fa{display: block;margin-left:1px;color:#fff;}
+		table tr td:first-child div{
+			width:18px;
+			height:18px;
+			margin-left:30px;
+			font-size:17px;
+			border:1px solid #ccc;
+			background:#fff;
+			border-radius:3px;
+			cursor:pointer;
+		}
+		table tr td:first-child .active{background:#3cb371;}
+		/* canvas{border:1px solid red;} */
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="con-top">
+			<select>
+				<option value="0">请选择</option>
+				<option value="1">选项1</option>
+				<option value="2">选项2</option>
+				<option value="3">选项3</option>
+			</select>
+			<input type="text" placeholder="请输入关键词">
+		</div>
+		<table>
+			<tr>
+				<td></td>
+				<td>项目</td>
+				<td>进度</td>
+				<td>任务</td>
+				<td>日期</td>
+			</tr>
+			<tr>
+				<td><div class="active"><i class="fa fa-check"></i></div></td>
+				<td>米莫说|MIMO Show</td>
+				<td><canvas></canvas></td>
+				<td>20%</td>
+				<td>2014.11.11</td>
+			</tr>
+			<tr>
+				<td><div><i class="fa fa-check"></i></div></td>
+				<td>商家与购物用户的交互试衣应用</td>
+				<td><canvas></canvas></td>
+				<td>40%</td>
+				<td>2014.11.11</td>
+			</tr>
+			<tr>
+				<td><div><i class="fa fa-check"></i></div></td>
+				<td>天狼-智能硬件项目</td>
+				<td><canvas></canvas></td>
+				<td>75%</td>
+				<td>2014.11.11</td>
+			</tr>
+			<tr>
+				<td><div><i class="fa fa-check"></i></div></td>
+				<td>线下超市+线上商城+物流派送互联系统</td>
+				<td><canvas></canvas></td>
+				<td>18%</td>
+				<td>2014.11.11</td>
+			</tr>
+		</table>
+	</div>
+	<script>
+		var fas = document.getElementsByClassName("fa");
+		for (var i = 0; i < fas.length; i++) {
+			fas[i].parentNode.addEventListener("click",function(){
+				if(this.className == "active"){
+					this.className = "";
+				}
+				else{
+					this.className = "active";
+				}
+			});
+		}
+		var cs = document.getElementsByTagName("canvas");
+		for (var i = 0; i < cs.length; i++) {
+			cs[i].width = 40;
+			cs[i].height = 40;
+			var context = cs[i].getContext("2d");
+			//获取任务进度百分比转换为小数
+			var jd = Number(cs[i].parentNode.parentNode.getElementsByTagName("td")[3].innerHTML.substring(0,2))/100;
+			//绘制灰色底层
+			context.beginPath();
+			context.arc(10,20,10,0,Math.PI*2);
+			context.closePath();
+			context.fillStyle = "#ddd";
+			context.strokeStyle = "#aaa";
+			context.fill();
+			context.stroke();
+
+			//绘制饼状图
+			context.beginPath();
+			context.moveTo(10,20);
+			//根据获得的小数计算饼状图的角度
+			context.arc(10,20,10,Math.PI*1.5,Math.PI*2*jd+Math.PI * 1.5);
+			context.lineTo(10,20);
+			context.closePath();
+			context.fillStyle = "#3cb371";
+			context.fill();
+		}
+	</script>
+</body>
+</html>

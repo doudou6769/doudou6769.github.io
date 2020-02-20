@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D轮播图</title>
+	<style type="text/css">
+		.swipe{
+			width:500px;
+			height:300px;
+			box-sizing: border-box;
+			transition:0.8s;
+			transform-style: preserve-3d;
+		}
+		.swipe img{
+			position:absolute;
+			width:500px;
+			height:300px;
+		}
+		.swipe img:nth-child(1){
+			transform:translate3d(0,0,150px);
+		}
+		.swipe img:nth-child(2){
+			transform:translate3d(0,0,-150px) rotateX(180deg);
+		}
+		.swipe img:nth-child(3){
+			transform: translate3d(0,150px,0) rotateX(-90deg);
+		}
+		.swipe img:nth-child(4){
+			transform:translate3d(0,-150px,0) rotateX(90deg);
+		}
+		.one{
+			width:500px;
+			height:300px;
+			border:10px solid #aaa;
+			margin:50px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="one">
+		<div class="swipe" id="swipe">
+			<img src="images/img1.jpg">
+			<img src="images/img2.jpg">
+			<img src="images/img3.jpg">
+			<img src="images/img4.jpg">
+		</div>
+	</div>
+	<script>
+		var swipe = document.getElementById("swipe");
+		var i = 0;
+		function showNext(){
+			i += 90;
+			swipe.style.transform = "rotateX(-" + i + "deg)"
+		}
+		setInterval(showNext,2000);
+	</script>
+</body>
+</html>

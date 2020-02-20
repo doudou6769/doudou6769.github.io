@@ -1,0 +1,178 @@
+/**********引入的外部字体***************/
+@font-face {
+    font-family: "汉仪乐喵体";
+    src: url(../font/font2.ttf);
+}
+@font-face{
+    font-family:"雁翎";
+    src:url(../font/font5.ttf);
+}
+@font-face{
+    font-family: "卡通";
+    src:url(../font/font4.TTF);
+}
+@font-face{
+    font-family: "剪纸";
+    src:url(../font/font3.TTF);
+}
+@font-face{
+    font-family: "e1";
+    src:url(../font/font1.ttf);
+}
+/***************end********************/
+
+html,body{height:100%;font-family: "微软雅黑";}
+.container{margin:0;padding:0;width:100%;}
+.navbar .collapse>ul>li>a:visited{color:#fff;}
+.logo{
+	margin:0 40px;
+	text-align: center;
+	padding-top:5px;
+	font-family: "卡通";
+}
+.navbar-default{
+	background: linear-gradient(to bottom,#2092ef,rgb(53,190,253));
+	color:#fff;
+	margin:0;
+	border:0;
+	border-radius:0;
+	z-index: 99;
+}
+@media (min-width: 768px){}
+.navbar .collapse>ul>li>a{color:#fff;}
+.navbar>.navbar-header>button{background:#2092EF;}
+.navbar>.navbar-header>.navbar-toggle:focus {background:#2092EF;}
+.navbar>.navbar-header>button .icon-bar{background:#fff;}
+#nav li a:hover{color:#6ff;}
+@media (min-width:768px){
+	.navbar-default{background: rgba(0,0,0,0)}
+	#nav li{position:relative;transition:all 0.8s;}
+	#nav li ::before{
+		position:absolute;
+		bottom:0;
+		left:0;
+		z-index: 999;
+		display: inline-block;
+		content: "";
+		width:100%;
+		height:3px;
+		background:rgba(9,9,9,0);
+		transition:all 0.2s;
+		border-radius:3px;
+	}
+	#nav li:hover{font-size:22px;}
+	#nav li:hover ::before{background:#6ff;}
+	#dl{display: none;}
+}
+.photo{
+	position:absolute;
+	right:100px;
+	top:4px;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+}
+#lunbo{
+	position:relative;
+	width:100%;
+	height:50vw;
+	margin:0;
+}
+@media (min-width: 768px){#lunbo{margin:-50px 0 0 0;}}
+#lunbo img{
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0;left:0;
+}
+
+.title-father .title h3{
+	position:relative;
+	margin:50px auto;
+	font:70px e1;
+	text-align: center;
+}
+.title-father .title h3::before{
+	position: absolute;
+	bottom:15%;
+	left:50%;
+	margin-left:-35px;
+	display: inline-block;
+	width:70px;
+	height: 6px;
+	content: '';
+	background:#f60;
+}
+#foot{
+	width:100%;
+	margin:0;
+	padding:25px 0;
+	background:#1e88ef;
+	font-family: "卡通";
+}
+#weixin{
+	height:150px;
+	text-align: center;
+	border-right:2px solid #ddd;
+	padding-top:8px;
+}
+@media (max-width:768px){#weixin{border:none;}}
+#weixin_text{
+	width:100%;
+	color:#fff;
+	font-size:12px;
+}
+#weixin_erweima{
+	display: inline-block;
+	width:100px;
+	height:100px;
+}
+#foot_right{
+	padding-top:8px;
+	color:#fff;
+}
+@media (max-width:768px){#foot_right{margin-left:50px;}}
+#foot_right p{
+	width:80%;
+	border-bottom:1px solid #fee;
+	padding:5px 0;
+}
+#foot_right a{color:#1e4498;}
+#foot_right a:hover{
+	color:#fff;
+	text-decoration:none;
+}
+#foot_right .row div:last-child ul li{margin-top:5px;}
+.foot{
+	position:fixed;
+	bottom:0;
+	left:50%;
+	height:5px;
+	background:#5ed5d1;
+}
+.return-top{
+	position:fixed;
+	width:40px;
+	height:40px;
+	border-radius: 50%;
+	background:#8df0f7;
+	color:#fff;
+	text-align: center;
+	line-height:37px;
+	font-size:25px;
+	cursor:pointer;
+	opacity:0;
+	transition:0.5s;
+}
+@media (max-width: 768px){
+	.return-top{
+		right:7px;
+		bottom:60px;
+	}
+}
+@media (min-width:769px){
+	.return-top{
+		right:100px;
+		bottom:60px;
+	}
+}
